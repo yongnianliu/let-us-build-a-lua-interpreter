@@ -26,6 +26,8 @@ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 
 const TValue luaO_nilobject_ = { {NULL}, LUA_TNIL };
 
+const Node dummynode_;
+
 int luaO_ceillog2(lua_Integer value) {  
 	for (int n = 0; n < MAXABITS; n++) {
 		if (value <= (lua_Integer)pow(2, n))
