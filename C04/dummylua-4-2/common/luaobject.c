@@ -24,6 +24,7 @@ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 #define arithint(op, v1, v2) (v1->value_.i = (v1->value_.i op v2->value_.i))
 #define arithnum(op, v1, v2) (v1->value_.n = (v1->value_.n op v2->value_.n))
 
+const Node dummynode_;
 const TValue luaO_nilobject_ = { {NULL}, LUA_TNIL };
 
 int luaO_ceillog2(lua_Integer value) {  

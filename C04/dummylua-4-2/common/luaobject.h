@@ -139,7 +139,7 @@ typedef struct Node {
     TValue value;
 } Node;
 
-const Node dummynode_;
+extern const Node dummynode_;
 
 struct Table {
     CommonHeader;
