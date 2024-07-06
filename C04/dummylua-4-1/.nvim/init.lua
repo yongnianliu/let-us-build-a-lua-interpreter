@@ -11,7 +11,8 @@ dap.configurations.cpp = {
     type = 'lldb',
     request = 'launch',
     program = function()
-      return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/build/linux/x86_64/debug/dummylua', 'file')
+      return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/build/linux/x86/debug/dummylua', 'file')
+      -- return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/build/linux/x86_64/debug/dummylua', 'file')
     end,
     cwd = '${workspaceFolder}',
     stopOnEntry = false,

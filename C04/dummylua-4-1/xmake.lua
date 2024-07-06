@@ -1,6 +1,7 @@
 target("dummylua")
-add_defines("Win32", "_WINDOWS_PLATFORM_=1")
-add_rules("mode.debug", "mode.release")
+-- add_defines("Win32", "_WINDOWS_PLATFORM_=1")
+    set_arch("x86")
+    add_rules("mode.debug", "mode.release")
 -- if is_mode("debug") then
 --         set_symbols("debug")
 --     set_optimize("none")
