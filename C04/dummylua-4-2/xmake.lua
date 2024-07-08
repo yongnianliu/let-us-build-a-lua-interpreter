@@ -1,9 +1,13 @@
 add_rules("mode.release", "mode.debug")
 target("dummylua")
-    on_build("windows", function (target)
-        print("build for windows")
+-- add_defines("Win32", "_WINDOWS_PLATFORM_=1")
+    -- on_build("windows", function (target)
+    --     print("build for windows")
+    --     add_defines("Win32", "_WINDOWS_PLATFORM_=1")
+    -- end)
+    if is_plat("windows") then
         add_defines("Win32", "_WINDOWS_PLATFORM_=1")
-    end)
+    end
     set_arch("x86")
     set_symbols("debug")
     -- add_rules("mode.debug", "mode.release")
